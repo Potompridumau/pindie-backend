@@ -16,6 +16,7 @@ const findAllUsers = async (req, res, next) => {
     req.usersArray = await users.find({}, { password: 0 });
     next();
 };
+
 const createUser = async (req, res, next) => {
     console.log('POST /users');
     try {
@@ -88,13 +89,15 @@ const checkEmptyNameAndEmailAndPassword = async (req, res, next) => {
     }
 };
 
-module.exports = findAllUsers;
-module.exports = createUser;
-module.exports = findUserById;
-module.exports = sendUserById;
-module.exports = updateUser;
-module.exports = deleteUser;
-module.exports = checkEmptyNameAndEmailAndPassword;
-module.exports = checkEmptyNameAndEmail;
-module.exports = checkIsUserExists;
-module.exports = hashPassword;
+module.exports = {
+    findAllUsers,
+    createUser,
+    findUserById,
+    sendUserById,
+    updateUser,
+    deleteUser,
+    checkIsUserExists,
+    checkEmptyNameAndEmail,
+    checkEmptyNameAndEmailAndPassword,
+    hashPassword
+};

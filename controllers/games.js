@@ -15,10 +15,13 @@ const sendGameUpdated = (req, res) => {
 
 const sendGameDeleted = (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
+
 	res.end(JSON.stringify(req.game));
 };
 
-module.exports = sendAllGames;
-module.exports = sendGameCreated;
-module.exports = sendGameUpdated;
-module.exports = sendGameDeleted;
+module.exports = {
+	sendAllGames,
+	sendGameCreated,
+	sendGameUpdated,
+	sendGameDeleted,
+};

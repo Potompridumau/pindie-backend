@@ -28,8 +28,6 @@ const login = (req, res) => {
     });
 };
 
-
-
 const sendIndex = (req, res) => {
   if (req.cookies.jwt) {
     try {
@@ -42,11 +40,8 @@ const sendIndex = (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 };
 
-
-const sendDashboard = (req, res) => {
+const sendDashboard = (_, res) => {
   res.sendFile(path.join(__dirname, "../public/admin/dashboard.html"));
 };
 
-module.exports = login;
-module.exports = sendIndex;
-module.exports = sendDashboard;
+module.exports = { login, sendIndex, sendDashboard };

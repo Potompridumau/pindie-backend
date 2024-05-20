@@ -130,14 +130,16 @@ const checkIsVoteRequest = async (req, res, next) => {
 	next();
 };
 
-
-module.exports = findAllGames;
-module.exports = createGame;
-module.exports = findGameById;
-module.exports = updateGame;
-module.exports = deleteGame;
-module.exports = checkEmptyFields;
-module.exports = checkIfCategoriesAvaliable;
-module.exports = checkIfUsersAreSafe;
-module.exports = checkIsGameExists;
-module.exports = checkIsVoteRequest;
+module.exports = {
+	findAllGames,
+	createGame,
+	findGameById,
+	sendGameById,
+	updateGame,
+	deleteGame,
+	checkEmptyFields,
+	checkIfCategoriesAvaliable,
+	checkIfUsersAreSafe,
+	checkIsGameExists,
+	checkIsVoteRequest,
+};
