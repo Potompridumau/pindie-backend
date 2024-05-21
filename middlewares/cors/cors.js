@@ -5,6 +5,7 @@ const ALLOWEDCORS = [
 	'https://students-projects.ru',
 	'http://localhost:3000',
 	'http://localhost:3001',
+	'https://frontend-practicum-test.nomoredomainswork.ru'
 ];
 
 function cors(req, res, next) {
